@@ -1,0 +1,18 @@
+2024-06-14T10:00:01.123456789Z stdout F {"level":"info","ts":"2024-06-14T10:00:01Z","msg":"Starting controller manager","version":"v1.28.0"}
+2024-06-14T10:00:05.234567890Z stderr F E0614 10:00:05.234567 1 reflector.go:138] k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Pod: failed to list *v1.Pod: Get "https://10.96.0.1:443/api/v1/pods": dial tcp 10.96.0.1:443: connect: connection refused
+2024-06-14T10:00:10.345678901Z stderr F W0614 10:00:10.345678 1 warnings.go:67] policy/v1beta1 PodDisruptionBudget is deprecated in v1.21+
+2024-06-14T10:00:15.456789012Z stdout F {"level":"error","ts":"2024-06-14T10:00:15Z","msg":"Reconciler error","controller":"deployment","name":"payment-service","namespace":"production","error":"context deadline exceeded"}
+2024-06-14T10:00:20.567890123Z stderr F E0614 10:00:20.567890 1 pod_workers.go:190] Error syncing pod "payment-service-7f8b9c4d5-xkj2p_production": failed to "StartContainer" for "payment-service" with CrashLoopBackOff: "back-off 5m0s restarting failed container=payment-service pod=payment-service-7f8b9c4d5-xkj2p_production(abc123)"
+2024-06-14T10:00:25.678901234Z stdout F {"level":"info","ts":"2024-06-14T10:00:25Z","msg":"Pod scheduled","pod":"payment-service-7f8b9c4d5-xkj2p","node":"worker-1"}
+2024-06-14T10:00:30.789012345Z stderr F E0614 10:00:30.789012 1 runtime.go:105] OOMKilled container payment-service in pod payment-service-7f8b9c4d5-xkj2p. Memory limit: 512Mi
+2024-06-14T10:00:35.890123456Z stdout F {"level":"warn","ts":"2024-06-14T10:00:35Z","msg":"High memory usage","pod":"api-gateway-abc123","memoryUsage":"480Mi","limit":"512Mi","percent":"93.75"}
+2024-06-14T10:00:40.901234567Z stderr F W0614 10:00:40.901234 1 controller.go:244] Node worker-2 is under disk pressure: 94% disk used
+2024-06-14T10:00:45.012345678Z stdout F {"level":"info","ts":"2024-06-14T10:00:45Z","msg":"Horizontal pod autoscaler scaled","name":"api-gateway","from":3,"to":5}
+2024-06-14T10:00:50.123456789Z stderr F E0614 10:00:50.123456 1 pod_workers.go:190] Error syncing pod "payment-service-7f8b9c4d5-xkj2p_production": failed to "StartContainer" for "payment-service" with CrashLoopBackOff: "back-off 10m0s restarting failed container"
+2024-06-14T10:00:55.234567890Z stderr F E0614 10:00:55.234567 1 pod_workers.go:190] Error syncing pod "payment-service-7f8b9c4d5-xkj2p_production": failed to "StartContainer" for "payment-service" with CrashLoopBackOff: "back-off 20m0s restarting failed container"
+2024-06-14T10:01:00.345678901Z stdout F {"level":"error","ts":"2024-06-14T10:01:00Z","msg":"Liveness probe failed","pod":"payment-service-7f8b9c4d5-xkj2p","container":"payment-service","error":"Get http://10.244.0.25:8080/health: dial tcp 10.244.0.25:8080: connect: connection refused"}
+2024-06-14T10:01:05.456789012Z stderr F E0614 10:01:05.456789 1 eviction_manager.go:290] Evicted pod payment-service-7f8b9c4d5-xkj2p_production due to memory pressure
+2024-06-14T10:01:10.567890123Z stdout F {"level":"info","ts":"2024-06-14T10:01:10Z","msg":"Image pull succeeded","image":"myapp:v2.1.0","pod":"frontend-deploy-new"}
+2024-06-14T10:01:15.678901234Z stderr F W0614 10:01:15.678901 1 container_gc.go:76] Failed to cleanup "OOMKilled" container: container "payment-service" in pod "payment-service-7f8b9c4d5-xkj2p"
+2024-06-14T10:01:20.789012345Z stdout F {"level":"info","ts":"2024-06-14T10:01:20Z","msg":"Service endpoints updated","service":"payment-service","endpoints":0}
+2024-06-14T10:01:25.890123456Z stdout F {"level":"info","ts":"2024-06-14T10:01:25Z","msg":"Deployment rollout status","deployment":"auth-service","ready":3,"updated":3,"available":3}

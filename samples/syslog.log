@@ -1,0 +1,28 @@
+Jun 14 10:00:01 web-server sshd[1234]: Accepted publickey for deploy from 192.168.1.50 port 52340 ssh2
+Jun 14 10:00:05 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:05 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:06 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:06 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:06 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:07 web-server sshd[1235]: Failed password for root from 10.0.0.99 port 22 ssh2
+Jun 14 10:00:07 web-server kernel: Out of memory: Kill process 9876 (java) score 892 or sacrifice child
+Jun 14 10:00:07 web-server kernel: Killed process 9876 (java) total-vm:8388608kB, anon-rss:6291456kB
+Jun 14 10:00:08 web-server myapp[5678]: FATAL: database connection pool exhausted after 30s
+Jun 14 10:00:09 web-server myapp[5678]: ERROR: failed to acquire connection from pool: timeout
+Jun 14 10:00:10 web-server myapp[5679]: WARN: retry attempt 3/5 for database connection
+Jun 14 10:00:11 web-server systemd[1]: myapp.service: Main process exited, code=killed, status=9/KILL
+Jun 14 10:00:11 web-server systemd[1]: myapp.service: Failed with result 'signal'.
+Jun 14 10:00:12 web-server systemd[1]: myapp.service: Scheduled restart job, restart counter is at 1.
+Jun 14 10:00:13 web-server systemd[1]: Started myapp.service.
+Jun 14 10:00:15 web-server myapp[5700]: INFO: Application started on port 8080
+Jun 14 10:00:17 web-server kernel: EXT4-fs error (device sda1): ext4_find_entry:1455: inode #2: comm java: reading directory lblock 0
+Jun 14 10:00:18 web-server myapp[5700]: ERROR: disk write failed: no space left on device /var/log
+Jun 14 10:00:19 web-server kernel: xfs_log_force: error -28 returned.
+Jun 14 10:00:20 web-server sudo[6001]: user1 : user NOT in sudoers ; TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/bin/bash
+Jun 14 10:00:21 web-server sudo[6002]: pam_unix(sudo:auth): authentication failure; logname= uid=1001 euid=0 tty=/dev/pts/0 ruser=user1 rhost=
+Jun 14 10:00:22 web-server cron[6100]: (root) CMD (find /var/log -name "*.log" -mtime +30 -delete)
+Jun 14 10:00:25 web-server myapp[5700]: WARN: response time 8432ms exceeds threshold 5000ms for /api/reports
+Jun 14 10:00:28 web-server myapp[5700]: INFO: processed 1000 records in 1234ms
+Jun 14 10:00:30 web-server kernel: TCP: Possible SYN flooding on port 443. Sending cookies. Check SNMP counters.
+Jun 14 10:00:31 web-server myapp[5700]: ERROR: SSL certificate for api.example.com expired 2 days ago
+Jun 14 10:00:35 web-server myapp[5700]: INFO: health check OK

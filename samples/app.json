@@ -1,0 +1,25 @@
+{"timestamp":"2024-06-14T10:00:01Z","level":"INFO","service":"api-gateway","message":"Server started on port 8080","version":"2.3.1"}
+{"timestamp":"2024-06-14T10:00:03Z","level":"INFO","service":"api-gateway","message":"Connected to database","host":"db-primary:5432","latency_ms":42}
+{"timestamp":"2024-06-14T10:00:05Z","level":"DEBUG","service":"auth-service","message":"JWT token validated","user_id":"usr_abc123","expiry":"2024-06-15T10:00:05Z"}
+{"timestamp":"2024-06-14T10:00:10Z","level":"WARN","service":"api-gateway","message":"Response time threshold exceeded","path":"/api/v1/reports","duration_ms":6834,"threshold_ms":5000}
+{"timestamp":"2024-06-14T10:00:12Z","level":"ERROR","service":"payment-service","message":"Database connection failed: connection refused","host":"db-primary:5432","retry":1}
+{"timestamp":"2024-06-14T10:00:13Z","level":"ERROR","service":"payment-service","message":"Database connection failed: connection refused","host":"db-primary:5432","retry":2}
+{"timestamp":"2024-06-14T10:00:14Z","level":"ERROR","service":"payment-service","message":"Database connection failed: connection refused","host":"db-primary:5432","retry":3}
+{"timestamp":"2024-06-14T10:00:15Z","level":"FATAL","service":"payment-service","message":"Max retries exceeded, shutting down","error":"could not connect to database after 3 attempts"}
+{"timestamp":"2024-06-14T10:00:16Z","level":"ERROR","service":"api-gateway","message":"Upstream service unavailable","upstream":"payment-service","status":503}
+{"timestamp":"2024-06-14T10:00:17Z","level":"ERROR","service":"api-gateway","message":"Upstream service unavailable","upstream":"payment-service","status":503}
+{"timestamp":"2024-06-14T10:00:18Z","level":"ERROR","service":"api-gateway","message":"Upstream service unavailable","upstream":"payment-service","status":503}
+{"timestamp":"2024-06-14T10:00:20Z","level":"WARN","service":"cache-service","message":"Redis connection pool near capacity","current":95,"max":100}
+{"timestamp":"2024-06-14T10:00:22Z","level":"ERROR","service":"auth-service","message":"Authentication failed: invalid credentials","user":"admin@example.com","ip":"185.234.219.117"}
+{"timestamp":"2024-06-14T10:00:22Z","level":"ERROR","service":"auth-service","message":"Authentication failed: invalid credentials","user":"admin@example.com","ip":"185.234.219.117"}
+{"timestamp":"2024-06-14T10:00:23Z","level":"ERROR","service":"auth-service","message":"Authentication failed: invalid credentials","user":"admin@example.com","ip":"185.234.219.117"}
+{"timestamp":"2024-06-14T10:00:23Z","level":"ERROR","service":"auth-service","message":"Authentication failed: invalid credentials","user":"admin@example.com","ip":"185.234.219.117"}
+{"timestamp":"2024-06-14T10:00:23Z","level":"ERROR","service":"auth-service","message":"Authentication failed: invalid credentials","user":"admin@example.com","ip":"185.234.219.117"}
+{"timestamp":"2024-06-14T10:00:24Z","level":"CRITICAL","service":"auth-service","message":"Brute force attack detected: 5 failed login attempts in 2 seconds","ip":"185.234.219.117","user":"admin@example.com"}
+{"timestamp":"2024-06-14T10:00:25Z","level":"INFO","service":"api-gateway","message":"Circuit breaker opened for payment-service"}
+{"timestamp":"2024-06-14T10:00:30Z","level":"ERROR","service":"notification-service","message":"Failed to send email: SMTP connection timeout","recipient":"user@example.com","smtp_host":"smtp.provider.com","timeout_ms":30000}
+{"timestamp":"2024-06-14T10:00:35Z","level":"INFO","service":"payment-service","message":"Service restarted successfully","pid":12345}
+{"timestamp":"2024-06-14T10:00:37Z","level":"INFO","service":"payment-service","message":"Database reconnected","host":"db-replica:5432","latency_ms":23}
+{"timestamp":"2024-06-14T10:00:40Z","level":"WARN","service":"api-gateway","message":"SSL certificate expiring soon","domain":"api.example.com","expires_in_days":7}
+{"timestamp":"2024-06-14T10:00:45Z","level":"INFO","service":"api-gateway","message":"Health check passed","status":"ok","checks":{"db":"ok","cache":"ok","queue":"ok"}}
+{"timestamp":"2024-06-14T10:00:50Z","level":"DEBUG","service":"worker","message":"Job completed","job_id":"job_xyz789","duration_ms":342,"status":"success"}
